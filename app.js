@@ -16,10 +16,12 @@ app.use(bodyParser.urlencoded({ // for parsing application/x-www-form-urlencoded
 
 app.get('/', function (request, response) {
 	fs.readFile('index.html', function (error, data) {
-		response.send(data.toString());		
+		response.send(data.toString());
 	});
 });
 
 server.listen(port, function() {
-    console.log('Server is running at 127.0.0.1:%d', port);    
+    console.log('Server is running at 127.0.0.1:%d', port);
 });
+
+console.log('test push')
